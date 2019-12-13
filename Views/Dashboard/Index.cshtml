@@ -1,0 +1,59 @@
+<main>        
+    <section class="eventos">
+        <div class="relatorio">
+            <div>  
+                <h3>Eventos Aprovados</h3>
+                @Model.ReservasAprovadas
+            </div>
+
+            <div>  
+                <h3>Eventos Pendentes</h3>
+                @Model.ReservasPendentes
+            </div>
+
+            <div>  
+                <h3>Eventos Reprovados</h3>
+                @Model.ReservasReprovadas
+            </div>
+        </div>
+
+
+        <h2>Eventos Pendentes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Cliente email</th>
+                    <th>Tipo</th>
+                    <th>Convidados</th>
+                    <th>Data</th>
+                    <th>Som</th>
+                    <th>Iluminacao</th>
+                    <th>Valor Total</th>
+                    <th>Aceitar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var reserva in Model.Reservas ) 
+                {
+                    <tr>
+                        <td>@reserva.Cliente.Nome</td>
+                        <td>@reserva.Cliente.Email</td>
+                        <td>A Fazer</td>
+                        <td>A Fazer</td>
+                        <td>@reserva.DataReserva</td>
+                        <td>@reserva.SomPreco</td>
+                        <td>@reserva.IluminacaoPreco</td>
+                        <td>@reserva.PrecoTotal</td>
+                        <td>
+                            <a href='@Url.Action("Aprovar", "Reserva", new {id = @reserva.Id})'>Aceitar</a>
+                            <a href='@Url.Action("Recusar", "Reserva", new {id = @reserva.Id})'>Recusar</a>
+                        </td>
+                    </tr>
+                }
+            
+            </tbody>
+        </table>
+
+    </section>
+</main>

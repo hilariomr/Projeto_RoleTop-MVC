@@ -1,0 +1,131 @@
+﻿@model RoleTopMVC_.ViewsModels.BaseViewModel
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Role Top</title>
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link href="icon/logo.png" rel="icon" type="image/x-icon"/>
+    
+    @if("Home".Equals(@Model.NomeView))
+    {
+        <link href="~/css/style.css" rel="stylesheet" type="text/css">
+    }
+    @if("Login".Equals(@Model.NomeView))
+    {
+        
+        <link href="~/css/login.css" rel="stylesheet" type="text/css">
+        <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+    }
+    @if("Cadastro".Equals(@Model.NomeView))
+    {
+        <link href="~/css/reset.css" rel="stylesheet" type="text/css">
+        <link href="~/css/default.css" rel="stylesheet" type="text/css">
+        <link href="~/css/cadastro.css" rel="stylesheet" type="text/css">
+        <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+        <link href="~/icon/logo.png" rel="icon" type="image/x-icon"/>
+    }
+    @if("Reserva".Equals(@Model.NomeView))
+    {
+        
+        <link href="~/css/reset.css" rel="stylesheet" type="text/css">
+        <link href="~/css/default.css" rel="stylesheet" type="text/css">
+        <link href="~/css/reserva.css" rel="stylesheet" type="text/css">
+    }
+    @if("Galeria".Equals(@Model.NomeView))
+    {
+        <link href="~/css/reset.css" rel="stylesheet" type="text/css">
+        <link href="~/css/galeria.css" rel="stylesheet" type="text/css">
+    }
+    @if("Dashboard".Equals(@Model.NomeView))
+    {
+        <link href="~/css/dashboard.css" rel="stylesheet" type="text/css">
+        <link href="~/css/reset.css" rel="stylesheet" type="text/css">
+        <link href="~/css/default.css" rel="stylesheet" type="text/css">
+    }
+    @if("Historico".Equals(@Model.NomeView))
+    {
+        <link href="~/css/reset.css" rel="stylesheet" type="text/css">
+        <link href="~/css/default.css" rel="stylesheet" type="text/css">
+        <link href="~/css/historico.css" rel="stylesheet" type="text/css">
+    }
+    
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="section-container">
+                <ul>
+                    <li id="bt-mobile-menu">
+                        <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Home" asp-action="Index" class="active">Home</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index", "Home")#eventos'>Eventos</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index", "Home")#espaço'>Espaço</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index","Home")#contato'>Contato</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Galeria" asp-action="Index">Galeria</a></li>
+                    
+                    @if(string.IsNullOrEmpty(@Model.UsuarioEmail)) {
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Login" asp-action="Index">Entrar</a></li>
+                    }
+                    else 
+                    {
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Reserva" asp-action="Index">Reservar</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Login" asp-action="Logoff">Deslogar  </a></li>
+                    }
+                    
+                    
+                </ul>
+            </div>
+        </nav>
+        @if("Home".Equals(@Model.NomeView))
+        {
+            Html.RenderPartial("_HeaderHomePage");
+        }
+        
+    </header>
+    @RenderBody()
+
+    @if(@Model.NomeView.Equals("Galeria")){
+    <script src="~/js/galeria.js"></script>
+    }
+    
+        
+
+    <script>
+            function toggleMobileMenu() {
+                var ul = document.querySelector("nav ul");
+                var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+                var icon = document.querySelector(".icon > i");
+    
+                ul.classList.toggle("mobile-mode");
+    
+                if (icon.classList.contains("fa-bars")) {
+                    icon.classList.remove("fa-bars");
+                    icon.classList.remove("fa");
+    
+                    icon.classList.add("fas");
+                    icon.classList.add("fa-skull");
+                } else {
+                    icon.classList.remove("fas");
+                    icon.classList.remove("fa-skull");
+    
+                    icon.classList.add("fa");
+                    icon.classList.add("fa-bars");
+                }
+    
+                for (var button of commonButtons) {
+                    button.classList.toggle("active");
+                }
+    
+            }
+        
+    </script>
+</body>
+</html>

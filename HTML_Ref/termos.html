@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Termos de uso</title>
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Solid:900%7COpen+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/default.css" rel="stylesheet" type="text/css">
+    <link href="css/footer.css" rel="stylesheet" type="text/css">
+    <link href="css/termos.css" rel="stylesheet" type="text/css">
+    <link href="icon/logo.png" rel="icon" type="image/x-icon"/>
+    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+</head>
+
+<body class="flex-container">
+    <header>
+        <nav>
+                <div class="section-container">
+                    <ul>
+                        <li id="bt-mobile-menu">
+                            <!-- HTML para colocar os ícones do FA -->
+                            <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="index.html" class="active">Home</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="index.html#eventos">Eventos</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="index.html#espaço">Espaço</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="index.html#contato">Contato</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="galeria.html">Galeria</a></li>
+                    </ul>
+                </div>
+            </nav>
+        <hgroup>
+            <h1>Role Top</h1>
+        </hgroup>
+    </header>
+    <main>
+        <form method="GET" action="dashboard.html">
+        <div>
+            <textarea rows="20" readonly cols="70">                         Termos de Uso
+Todos os eventos publicados na plataforma estão sob responsabilidade de seus Organizadores, uma vez que a Role Top não produz tais eventos. Cabe aos Organizadores definirem as quantidades e valores dos ingressos disponibilizados para venda, regras para acesso aos eventos, políticas de reembolso, troca de titularidade, etc;
+            </textarea>
+        </div>
+        <div id="termo">
+            <input type="checkbox" name="aceite" checked> Li e aceito os termos de uso</input>
+        </div>
+        <div id="botao-pagamento">
+        <input type="submit" value="CONTINUAR" />
+        </div>
+        </form>
+
+    </main>
+
+
+    
+</body>
+
+</html>

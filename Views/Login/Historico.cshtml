@@ -1,0 +1,32 @@
+@model RoleTopMVC_.ViewsModels.HistoricoViewModel
+@{
+    ViewData["Title"] = "Reservas - RoleTop";
+    ViewData["H2"] = "Histórico de Reservas";
+}
+
+<main>
+    <h2>@ViewData["H2"]
+
+    </h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Iluminacao</th>
+                <th>Som</th>
+                <th>Preço Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach( var reserva in Model.Reservas ) {
+                <tr>
+                    <td>@reserva.DataReserva</td>
+                    <td>@reserva.IluminacaoPreco</td>
+                    <td>@reserva.SomPreco</td>
+                    <td>@reserva.PrecoTotal</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</main>

@@ -1,0 +1,23 @@
+<main>
+        <img src="icon/user.png" alt="Login" title="Icone Login">
+        <h2>Login</h2>
+        <form method="POST" action='@Url.Action("Login", "Login")'>
+        <div>
+            <label for="email">Email</label>
+                <br />
+            <input id="email" type="text" maxlength="30" minlength="5" name="email" />
+        </div>
+        <div>
+            <label for="senha">Senha</label>
+            <br />
+            <input id="senha" type="password" type="text" maxlength="20" minlength="3" name="senha" />
+            <br> 
+        </div>
+        <div id="lembrar">
+            <input type="checkbox" name="lembrar_senha" checked > <p>Lembrar</p> 
+            <a id="senha" href="password.html">Esqueci a senha</a>
+        </div>  
+            <input type="submit" value="ENTRAR" />
+            <a id="criar-conta" asp-controller="Cadastro" asp-action="Index">Criar conta</a>
+        </form>
+    </main>

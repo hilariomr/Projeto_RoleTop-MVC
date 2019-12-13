@@ -1,0 +1,9 @@
+p {
+    text-align: left;
+    padding: 10px;
+}
+
+p span {
+    font-size: 1.4rem;
+    display: block;
+}

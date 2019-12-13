@@ -1,0 +1,149 @@
+#home {
+    font-size: 1.8em;
+    margin: 5em;
+    }
+
+#eventos h2 {
+    margin-left: 45%;
+    
+}
+
+#eventos img {
+    width: 70px;
+}
+
+#eventos p{
+    font-size: 1.8em;
+    
+    
+}
+
+.icones {
+    display: flex;
+    justify-content: space-around;
+    padding: 5em;
+}
+.muito{
+    margin-left: 85%;
+}
+
+#espaço h2 {
+    margin-left: 45%;
+    
+}
+
+#foto-local {
+   padding: 5em 4em;
+}
+
+.comentarios h3 {
+    font-size: 1.4em;
+}
+
+#foto-local img {
+    width: 16%;
+    padding: 0.3em;
+}
+
+.comentarios {
+    padding: 5em;
+}
+.comentarios h3 {
+    padding: 2em;
+}
+
+
+.espaço ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 2em 0 2em 0;
+    font-size: 1.8em;
+}
+
+#planta {
+    width: 25%;
+    background-color:#7D0093;
+    transform: rotate(270deg);
+    
+}
+
+#regras {
+    width: 30%;
+    background-color:#7D0093;
+}
+
+.regra-mapa {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 0 5em 5em;
+}
+
+
+#contato h2 {
+    margin-left: 45%;
+    padding-top: 2em;
+}
+
+.contato-redes img {
+    width: 35px;
+    
+}
+
+.contato-redes {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 1em;
+    background-color: #FFC600;
+    
+}
+.redes-sociais {
+    margin-left: 55%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.redes-sociais a {
+    padding-left: 10px;
+    
+}
+
+
+
+#email {
+    margin-left: 2%;
+}
+
+#telefone {
+    margin-left: 10%;
+}
+
+#pagamento {
+    background-color: #000;
+    color: #fff;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    display: flex;
+    justify-content: space-around;
+   
+}
+#pagamento a {
+    color: #fff;
+}
+#pagamento img{
+   
+}
+#boleto {
+    width: 3%;
+}
+#mastercard {
+    width: 2%;
+}
+#visa{
+    width: 2%;
+}
+#paypal {
+    width: 2%;
+}

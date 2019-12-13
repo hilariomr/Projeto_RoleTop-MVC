@@ -1,0 +1,66 @@
+@model RoleTopMVC_.ViewsModels.ReservaViewModel
+<body class="flex-container">
+<main>
+        <h2>RESERVAS</h2>
+        <form method="POST" action='@Url.Action("Registrar", "Reserva")'>
+
+            <div>
+                <label for="eventos">Qual tipo de evento:</label>
+                <select id="evento" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="aniversario">Aniversario</option>
+                    <option value="casamento">Casamento</option>
+                    <option value="bandas">Evento de Bandas</option>
+                    <option value="despedida">Festa de Despedida</option>
+                    <option value="corporativo">Evento Corporativo</option>
+                    <option value="balada">Balada Teen</option>
+                    <option value="formatura">Formatura</option>
+                    <option value="bazar">Bazar</option>
+                    <option value="faculdade">Evento Faculdade</option>
+                </select>
+                <br />
+            </div>
+
+            <div>
+                <label for="convidados">Numero de convidados</label>
+                <br />
+                <input id="convidados" required type="number" maxlength="20" minlength="3" name="convidados" />
+            </div>
+
+            <div>
+                <label for="descricao">Descricao do evento</label>
+                <br />
+                <textarea rows="5" cols="10"> </textarea>
+            </div>
+            <div class="double-field">
+                <div>
+                    <label for="iluminacao">Iluminação</label>
+                    <select id="iluminacao" name="iluminacao" required>
+
+                       <option value="nao">Nao</option>
+                       <option value="sim">Sim</option>
+                        
+                    </select>
+                </div>
+            
+                <div>
+                    <label for="som">Som</label>
+                    <select id="som" name="som">
+
+                        <option value="nao">Nao</option>
+                        <option value="sim">Sim</option>
+                        
+                    </select>
+                </div> 
+            </div>
+            <div>
+                <label for="data">Data do Evento</label>
+                <br />
+                <input id="date" required type="date" />
+            </div>
+
+            <input type="submit" value="CONTINUAR" />
+        </form>
+
+    </main>
+    </body>

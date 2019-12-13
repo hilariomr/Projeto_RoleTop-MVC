@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/default.css" rel="stylesheet" type="text/css">
+    <link href="css/cadastro.css" rel="stylesheet" type="text/css">
+    <link href="icon/logo.png" rel="icon" type="image/x-icon"/>
+    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+</head>
+
+<body class="flex-container">
+    <header>
+        <nav>
+                <div class="section-container">
+                    <ul>
+                        <li id="bt-mobile-menu">
+                            <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="index.html" class="active">Home</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="index.html#eventos">Eventos</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="index.html#espaço">Espaço</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="index.html#contato">Contato</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="galeria.html">Galeria</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="login.html">Entrar</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="reserva.html">Reservar</a></li>
+                    </ul>
+                </div>
+            </nav>
+        <hgroup>
+            <h1>Role Top</h1>
+        </hgroup>
+    </header>
+
+    <main>
+        <h2>Cadastro</h2>
+        <form method="GET" action="index.html">
+
+            <div>
+                <label for="e-mail">Email</label>
+                <br />
+                <input id="e-mail" required type="text" maxlength="20" minlength="3" name="email" />
+            </div>
+
+            <div>
+                <label for="senha">Senha</label>
+                <br />
+                <input id="senha" required type="password" maxlength="20" minlength="3" name="senha" />
+            </div>
+
+            <div>
+                <label for="cpf">CPF</label>
+                <br />
+                <input id="cpf" required type="text" />
+            </div>
+
+            <div>
+                <label for="nome">Nome</label>
+                <br />
+                <input id="nome" required type="nome" />
+            </div>
+
+            <div>
+                <label for="Data de Nascimento">Data de Nascimento</label>
+                <br />
+                <input id="date" required type="date">
+            </div>
+
+            <div>
+                <label for="tel">Telefone</label>
+                <br />
+                <input id="tel" type="telefone" />
+            </div>
+
+            <input type="submit" value="CRIAR" />
+        </form>
+
+    </main>
+
+
+
+    <script>
+            function toggleMobileMenu() {
+                var ul = document.querySelector("nav ul");
+                var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+                var icon = document.querySelector(".icon > i");
+    
+                ul.classList.toggle("mobile-mode");
+    
+                if (icon.classList.contains("fa-bars")) {
+                    icon.classList.remove("fa-bars");
+                    icon.classList.remove("fa");
+    
+                    icon.classList.add("fas");
+                    icon.classList.add("fa-skull");
+                } else {
+                    icon.classList.remove("fas");
+                    icon.classList.remove("fa-skull");
+    
+                    icon.classList.add("fa");
+                    icon.classList.add("fa-bars");
+                }
+    
+                for (var button of commonButtons) {
+                    button.classList.toggle("active");
+                }
+    
+            }
+        
+    </script>
+</body>
+
+</html>

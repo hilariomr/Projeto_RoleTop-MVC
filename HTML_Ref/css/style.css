@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(to bottom right, #7d0093, #FFC600);
+}
+
+h1,h2, h3, h4, h5, h6 {
+    font-family:'Fredoka One', 'Londrina Solid', cursive;
+    font-size: 2em;
+}
+
+h1 {
+    display: none;
+}
+
+
+/*********************************************
+                    LOGO
+**********************************************/                    
+#logo-area {
+    background-image: url(../img/principal-banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 0.3em;
+    
+}
+
+#logo-area > img {
+    padding: 3em 0 0 0;
+    width: 35%;
+}
+
+
+
+
+/*********************************************
+                    LOGO
+**********************************************/
+/*********************************************
+                    NAV
+**********************************************/
+nav {
+    background-color: #FFC600;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+nav #bt-mobile-menu {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+    list-style-type: none;
+}
+
+nav ul > li {
+    width: 100%;
+    text-align: center;
+}
+
+nav ul > li > a {
+	display: block;
+	padding: 0.4em;
+    text-decoration: none;
+    color: #361a0c;
+    font-weight: bold;
+}
+
+nav ul > li > a:hover {
+    background-color: #7d0093;
+    color: #fff;
+}
+
+/*********************************************
+                    NAV
+**********************************************/
+
+
+#home {
+    font-size: 1.8em;
+    margin: 5em;
+    }
+
+#eventos h2 {
+    margin-left: 45%;
+    
+}
+
+#eventos img {
+    width: 70px;
+}
+
+#eventos p{
+    font-size: 1.8em;
+    
+    
+}
+
+.icones {
+    display: flex;
+    justify-content: space-around;
+    padding: 5em;
+}
+.muito{
+    margin-left: 85%;
+}
+
+#espaço h2 {
+    margin-left: 45%;
+    margin-top: 5em;
+}
+
+#foto-local{
+    display: flex;
+    justify-content: left;
+    padding: 5em;
+    margin-left: 5em;
+    float: left;
+}
+#foto-local img {
+    width: 40em;
+    border: 1px solid #ccc;
+  
+}
+
+#foto-local a > img:hover {
+    border: 1px solid #777;
+    border: 7px solid black;
+}
+.comentarios {
+    padding: 2em;
+    float: none;
+}
+
+.comentarios h3 {
+    padding: 2em;
+    font-size: 1.4em;
+}
+#espaço {
+    clear: both;
+}
+
+
+.espaço ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 2em 0 2em 0;
+    font-size: 1.8em;
+}
+
+#planta {
+    width: 25%;  
+}
+
+#regras {
+    width: 30%;
+}
+
+.regra-mapa {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 0 5em 5em;
+}
+
+
+#contato h2 {
+    margin-left: 45%;
+    padding-top: 2em;
+}
+
+.contato-redes img {
+    width: 35px;
+    
+}
+#contato {
+    float: inline-end;
+}
+
+.contato-redes {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 1em;
+    background-color: #FFC600;
+    
+}
+.redes-sociais {
+    margin-left: 55%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.redes-sociais a {
+    padding-left: 10px;
+}
+
+#email {
+    margin-left: 2%;
+}
+
+#telefone {
+    margin-left: 10%;
+}
+
+#pagamento {
+    background-color: #000;
+    color: #fff;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    display: flex;
+    justify-content: space-around;
+   
+}
+#pagamento a {
+    color: #fff;
+}
+#pagamento img{
+   
+}
+#boleto {
+    width: 3%;
+}
+#mastercard {
+    width: 2%;
+}
+#visa{
+    width: 2%;
+}
+#paypal {
+    width: 2%;
+}
+
+.evento-patrocinado {
+    clear: both;
+}
+
+table {
+    margin: 0 auto;
+    width: 30em;
+    font-size: 2em;
+    border-radius: 8px;
+}
+
+table, th, td {
+    border: 1px solid #ffecab;
+    border-spacing: 0;
+  }
+
+  th, td {
+    padding: 25px;
+  }
+
+  th {
+      text-align: left;
+  }
+
+  td img {
+      width: 15%;
+      height: 15%;
+      
+  }
+  tbody > tr > td{
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  td strong {
+      color: #7d0093;
+  }
+  @media (max-width: 800px) {
+    main {
+        width:70%;
+    }
+}
